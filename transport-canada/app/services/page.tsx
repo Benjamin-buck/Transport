@@ -21,14 +21,38 @@ import Link from "next/link";
 
 const page = () => {
   return (
-    <div className="mb-10 grid grid-cols-12 mx-auto container">
-      <div className="col-span-3 h-full">
-        <LeftMenu />
-      </div>
-      <div className="col-span-9 px-6 ">
+    <div className="mb-10 mx-auto container">
+      <div className="">
         <div className="mt-8 ">
           <Title>Services</Title>
         </div>
+
+        <div className="container mx-auto mt-12">
+          <h2 className="text-2xl font-semibold">All TDG Services</h2>
+
+          {/* Grid */}
+          <div className="grid grid-cols-12 mt-6 gap-6">
+            <ApplicationCard
+              name="Client Identification Database Test"
+              icon={<PhoneCall />}
+              description="If your organization imports, offers for transport, handles, or transports dangerous goods in Canada, you must register with Transport Canada’s Client Identification Database (CID)."
+              link="/cid/new-registration-generic"
+            />
+            <ApplicationCard
+              name="Incidents Database"
+              icon={<PhoneCall />}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+              link="/cid"
+            />
+            <ApplicationCard
+              name="CANUTEC Registration Service"
+              icon={<PhoneCall />}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+              link="/cid"
+            />
+          </div>
+        </div>
+
         <div className="mx-auto container mt-12">
           <h2 className="text-2xl font-semibold mb-6">
             My Registered Services
@@ -67,31 +91,6 @@ const page = () => {
               </TableRow>
             </TableBody>
           </Table>
-        </div>
-        <div className="container mx-auto mt-12">
-          <h2 className="text-2xl font-semibold">All TDG Services</h2>
-
-          {/* Grid */}
-          <div className="grid grid-cols-12 mt-6 gap-6">
-            <ApplicationCard
-              name="Client Identification Database Test"
-              icon={<PhoneCall />}
-              description="If your organization imports, offers for transport, handles, or transports dangerous goods in Canada, you must register with Transport Canada’s Client Identification Database (CID)."
-              link="/cid"
-            />
-            <ApplicationCard
-              name="Incidents Database"
-              icon={<PhoneCall />}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-              link="/cid"
-            />
-            <ApplicationCard
-              name="CANUTEC Registration Service"
-              icon={<PhoneCall />}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-              link="/cid"
-            />
-          </div>
         </div>
       </div>
     </div>

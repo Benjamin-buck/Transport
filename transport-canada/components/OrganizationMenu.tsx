@@ -1,5 +1,11 @@
 "use client";
-import { Building2, LayoutDashboard, ShoppingBag } from "lucide-react";
+import {
+  CircleUser,
+  HomeIcon,
+  LayoutDashboard,
+  MapPin,
+  ShoppingBag,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
@@ -17,7 +23,7 @@ const LeftMenu = () => {
             "bg-[#39414C] text-white rounded-md"
           } `}
         >
-          <LayoutDashboard /> Dashboard
+          <LayoutDashboard /> My Organization
         </Link>
         <Link
           href="/organizations/sample-organization/sites"
@@ -26,10 +32,20 @@ const LeftMenu = () => {
             "bg-[#39414C] text-white rounded-md"
           } `}
         >
-          <Building2 />
+          <MapPin />
           Sites
         </Link>
         <Link
+          href="/organizations/sample-organization/contacts"
+          className={`w-full py-2 px-6 flex gap-2 items-center ${
+            path === "/organizations/sample-organization/contacts" &&
+            "bg-[#39414C] text-white rounded-md"
+          } `}
+        >
+          <CircleUser />
+          Contacts
+        </Link>
+        {/* <Link
           href="/organizations/sample-organization/services"
           className={`w-full py-2 px-6 flex gap-2 items-center ${
             path === "/organizations/sample-organization/services" &&
@@ -38,7 +54,17 @@ const LeftMenu = () => {
         >
           <ShoppingBag />
           Registered Services
-        </Link>
+        </Link> */}
+
+        {/* <div className="border-t mt-8">
+          <Link
+            href="/"
+            className={`w-full py-2 px-6 flex gap-2 items-center mt-2`}
+          >
+            <HomeIcon />
+            Home
+          </Link>
+        </div> */}
       </div>
     </div>
   );

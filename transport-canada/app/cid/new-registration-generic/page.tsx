@@ -13,6 +13,14 @@ import {
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { organizations } from "@/data/data";
 
 const CID = () => {
   return (
@@ -27,13 +35,28 @@ const CID = () => {
         </Link>
       </div>
       <Title>Client Idenfication Database</Title>
-      <InfoMessage>
-        <p>Your Organization is currently not registered.</p>
-        <p>
-          To start a new registration, please select the 'Start a Registration'
-          button .
-        </p>
-      </InfoMessage>
+
+      <div className="my-6">
+        <h3 className="text-2xl font-semibold ">Select An Organization</h3>
+        <p>Please select the organization for the CID Registration.</p>
+        <div className="mt-3">
+          <Select>
+            <SelectTrigger className="w-[400px]">
+              <SelectValue placeholder="Select an organization" />
+            </SelectTrigger>
+            <SelectContent>
+              {organizations.map((org) => (
+                <SelectItem key={org.operatingName} value={org.operatingName}>
+                  {org.operatingName}
+                </SelectItem>
+              ))}
+
+              <SelectItem value="dark">Dark</SelectItem>
+              <SelectItem value="system">System</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
       <div className="flex gap-3 items-center">
         <Link href="/organizations/sample-organization" className="underline">
           Back

@@ -1,7 +1,7 @@
 import LeftMenu from "@/components/LeftMenu";
 import OrganizationMenu from "@/components/OrganizationMenu";
 import Title from "@/components/Title";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, User2 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import {
@@ -36,28 +36,32 @@ const SampleOrganization = () => {
           <div className="mt-8 flex justify-between items-center">
             <div>
               <h3 className="text-lg">Walmart Incorporated.</h3>
-              <Title>Sites</Title>
+              <Title>Contacts</Title>
             </div>
-            <button className="button-dark">New Site</button>
+            <button className="button-dark">New Contact</button>
           </div>
           <div className="mt-6">
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[100px]">Site ID</TableHead>
-                  <TableHead>Site Name</TableHead>
-                  <TableHead>Address</TableHead>
+                  <TableHead>First Name</TableHead>
+                  <TableHead>Last NameName</TableHead>
+                  <TableHead>Email</TableHead>
+                  <TableHead>Phone</TableHead>
+                  <TableHead>Portal User</TableHead>
                   <TableHead className="text-right">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 <TableRow>
-                  <TableCell className="font-medium">001920</TableCell>
-                  <TableCell>Barrhaven Walmart</TableCell>
+                  <TableCell>Benjamin</TableCell>
+                  <TableCell>Buck</TableCell>
+                  <TableCell>benjamin.buck@tc.gc.ca</TableCell>
+                  <TableCell>(613) 266-0360</TableCell>
                   <TableCell>
-                    102 Strandherd Rd, Ottawa ON, Canada K7L 9P2
+                    <User2 />
                   </TableCell>
-                  <TableCell className="text-right">View / Modify</TableCell>
+                  <TableCell className="text-right underline">Edit</TableCell>
                 </TableRow>
               </TableBody>
             </Table>

@@ -25,7 +25,7 @@ const LeftMenu = () => {
           } `}
         >
           <Building2 />
-          Organizations
+          My Organizations
         </Link>
         <Link
           href="/services"

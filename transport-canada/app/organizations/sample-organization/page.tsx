@@ -4,18 +4,29 @@ import Title from "@/components/Title";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import ApplicationCard from "@/components/ApplicationCard";
+import { sampleOrgRegistrations } from "@/data/data";
 
 const SampleOrganization = () => {
   return (
     <div>
       <div className="mx-auto container mt-2">
         <div className="mb-2 flex gap-2 items-center">
-          <Link href="/" className="underline">
-            TDG Online
+          <Link href="/organizations" className="underline">
+            Organizations
           </Link>
           <ChevronLeft size={15} />
           <Link href="/" className="underline">
-            Client Identification Database
+            Organization Dashboard
           </Link>
         </div>
       </div>
@@ -25,11 +36,11 @@ const SampleOrganization = () => {
         </div>
         <div className=" col-span-9">
           <div className="mt-8">
-            <h3 className="text-lg">Organization Dashboard</h3>
-            <Title>Walmart Incorporated.</Title>
+            <Title>Organization Dashboard</Title>
           </div>
 
-          <div className="bg-gray-100 px-6 py-8 mt-6 shadow rounded-md">
+          <div className="card space-y-2">
+            <h3 className="card-heading">Walmart Incorporated.</h3>
             <p>
               <span className="font-bold">Legal Name:</span> 102948292 Inc.
             </p>
@@ -46,6 +57,72 @@ const SampleOrganization = () => {
             <p>
               <span className="font-bold">Website:</span> http://www.walmart.ca/
             </p>
+            <div className="flex justify-end underline">
+              <Link href="/">Edit</Link>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold mb-6">
+              Organization Registrations
+            </h2>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Service</TableHead>
+                  <TableHead>Registration Date</TableHead>
+                  <TableHead>Expiry Date</TableHead>
+                  <TableHead>Registration Status</TableHead>
+                  <TableHead className="text-right">Actions</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {sampleOrgRegistrations.map((registration) => (
+                  <TableRow key={registration.id}>
+                    <TableCell>{registration.service}</TableCell>
+
+                    <TableCell>{registration.registrationDate}</TableCell>
+                    <TableCell>{registration.expiryDate}</TableCell>
+                    <TableCell>
+                      <span
+                        className={`${
+                          registration.status == "Registered" &&
+                          "bg-green-200 text-green-600 border-green-600"
+                        } ${
+                          registration.status == "Under Review" &&
+                          "bg-orange-200 text-orange-600 border-orange-600"
+                        } px-4 py-1  border-l-4 `}
+                      >
+                        {registration.status}
+                      </span>
+                    </TableCell>
+                    <TableCell className="text-right text-blue-500 underline">
+                      View / Modify
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold">Register a New Service</h2>
+            <div className="grid grid-cols-12 gap-3 mt-6">
+              <ApplicationCard
+                name="Client Identification Database"
+                description="Description"
+                link="/cid"
+              />
+              <ApplicationCard
+                name="Incident Database "
+                description="Description"
+                link="/cid"
+              />
+              <ApplicationCard
+                name="CANUTEC Registration System"
+                description="Description"
+                link="/cid"
+              />
+            </div>
           </div>
         </div>
       </div>
