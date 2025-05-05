@@ -12,10 +12,14 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { CIDRegistrationSites } from "@/data/data";
+
 import { useRouter } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  CIDRegistrationSites,
+  registrationContacts,
+} from "@/data/cid-registration";
 
 const NewCIDRegistration = () => {
   const router = useRouter();
@@ -79,22 +83,22 @@ const NewCIDRegistration = () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  <TableRow>
-                    <TableCell>Benjamin</TableCell>
-                    <TableCell>Buck</TableCell>
-                    <TableCell>benjamin.buck@tc.gc.ca</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Erik</TableCell>
-                    <TableCell>Dennis</TableCell>
-                    <TableCell>erik.dennis@tc.gc.ca</TableCell>
-                  </TableRow>
+                  {registrationContacts.map((contact) => (
+                    <TableRow key={contact.firstName}>
+                      <TableCell>{contact.firstName}</TableCell>
+                      <TableCell>{contact.lastName}</TableCell>
+                      <TableCell>{contact.email}</TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </div>
 
             <div className="flex justify-end">
-              <Link href="/" className="underline text-blue-500">
+              <Link
+                href="/cid/new-registration/contacts"
+                className="underline text-blue-500"
+              >
                 Edit
               </Link>
             </div>
@@ -121,11 +125,21 @@ const NewCIDRegistration = () => {
                       </TableCell>
                       <TableCell>{site.address}</TableCell>
                       <TableCell>
-                        <span className="bg-red-200 px-3 py-0.5 border-l-4 border-red-600 text-red-600">
-                          Incomplete
+                        <span
+                          className={`${
+                            site.cidDetails == "Complete"
+                              ? "bg-green-200 text-green-600 border-green-600"
+                              : "bg-red-200 text-red-600 border-red-600"
+                          } border-l-4 px-4 py-0.5`}
+                        >
+                          {site.cidDetails}
                         </span>
                       </TableCell>
-                      <TableCell className="underline">Edit / Modify</TableCell>
+                      <TableCell className="underline">
+                        <Link href="/cid/new-registration/hoti-information">
+                          Edit
+                        </Link>
+                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -133,7 +147,10 @@ const NewCIDRegistration = () => {
             </div>
 
             <div className="flex justify-end">
-              <Link href="/" className="underline text-blue-500">
+              <Link
+                href="/cid/new-registration/select-sites"
+                className="underline text-blue-500"
+              >
                 Edit
               </Link>
             </div>

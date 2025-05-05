@@ -14,7 +14,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import ApplicationCard from "@/components/ApplicationCard";
-import { sampleOrgRegistrations } from "@/data/data";
+import { applicationServices, sampleOrgRegistrations } from "@/data/data";
 
 const SampleOrganization = () => {
   return (
@@ -107,21 +107,14 @@ const SampleOrganization = () => {
           <div className="mt-12">
             <h2 className="text-2xl font-semibold">Register a New Service</h2>
             <div className="grid grid-cols-12 gap-3 mt-6">
-              <ApplicationCard
-                name="Client Identification Database"
-                description="Description"
-                link="/cid"
-              />
-              <ApplicationCard
-                name="Incident Database "
-                description="Description"
-                link="/cid"
-              />
-              <ApplicationCard
-                name="CANUTEC Registration System"
-                description="Description"
-                link="/cid"
-              />
+              {applicationServices.map((service) => (
+                <ApplicationCard
+                  key={service.title}
+                  name={service.title}
+                  description={service.description}
+                  link={service.href}
+                />
+              ))}
             </div>
           </div>
         </div>

@@ -70,6 +70,17 @@ const page = () => {
           </TableBody>
         </Table>
       </div>
+      <div className="mt-8 flex justify-between items-center">
+        <Title>Pending Organizations</Title>
+      </div>
+      <div>
+        <InfoMessage>
+          <p>
+            The following is a list of all organizations associated to your
+            account.
+          </p>
+        </InfoMessage>
+      </div>
     </div>
   );
 };

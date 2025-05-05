@@ -13,6 +13,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { sites } from "@/data/data";
 
 const SampleOrganization = () => {
   return (
@@ -38,7 +39,12 @@ const SampleOrganization = () => {
               <h3 className="text-lg">Walmart Incorporated.</h3>
               <Title>Sites</Title>
             </div>
-            <button className="button-dark">New Site</button>
+            <Link
+              href="/organizations/sample-organization/sites/new"
+              className="button-dark"
+            >
+              New Site
+            </Link>
           </div>
           <div className="mt-6">
             <Table>
@@ -51,14 +57,16 @@ const SampleOrganization = () => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">001920</TableCell>
-                  <TableCell>Barrhaven Walmart</TableCell>
-                  <TableCell>
-                    102 Strandherd Rd, Ottawa ON, Canada K7L 9P2
-                  </TableCell>
-                  <TableCell className="text-right">View / Modify</TableCell>
-                </TableRow>
+                {sites.map((site) => (
+                  <TableRow key={site.siteId}>
+                    <TableCell className="font-medium">{site.siteId}</TableCell>
+                    <TableCell>{site.siteName}</TableCell>
+                    <TableCell>{site.address}</TableCell>
+                    <TableCell className="text-right text-blue-500 underline">
+                      Edit
+                    </TableCell>
+                  </TableRow>
+                ))}
               </TableBody>
             </Table>
           </div>

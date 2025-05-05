@@ -5,7 +5,7 @@ import React from "react";
 interface Props {
   name: string;
   description: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   link: string;
 }
 

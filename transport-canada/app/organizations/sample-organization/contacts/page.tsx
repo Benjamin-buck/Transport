@@ -13,6 +13,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { contacts } from "@/data/data";
 
 const SampleOrganization = () => {
   return (
@@ -53,16 +54,16 @@ const SampleOrganization = () => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                <TableRow>
-                  <TableCell>Benjamin</TableCell>
-                  <TableCell>Buck</TableCell>
-                  <TableCell>benjamin.buck@tc.gc.ca</TableCell>
-                  <TableCell>(613) 266-0360</TableCell>
-                  <TableCell>
-                    <User2 />
-                  </TableCell>
-                  <TableCell className="text-right underline">Edit</TableCell>
-                </TableRow>
+                {contacts.map((contact) => (
+                  <TableRow key={contact.email}>
+                    <TableCell>{contact.firstName}</TableCell>
+                    <TableCell>{contact.lastName}</TableCell>
+                    <TableCell>{contact.email}</TableCell>
+                    <TableCell>{contact.phone}</TableCell>
+                    <TableCell>{contact.portalUser && <User2 />}</TableCell>
+                    <TableCell className="text-right underline">Edit</TableCell>
+                  </TableRow>
+                ))}
               </TableBody>
             </Table>
           </div>
