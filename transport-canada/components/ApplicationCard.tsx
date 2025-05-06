@@ -11,8 +11,8 @@ interface Props {
 
 const ApplicationCard = ({ name, description, icon, link }: Props) => {
   return (
-    <div className="col-span-4 rounded-lg shadow-md shadow-gray-300 border-l-4 border-black">
-      <div className="border border-gray-200 rounded-md">
+    <div className="col-span-3 rounded-lg shadow-md shadow-gray-300 border-l-4 border-black">
+      <div className="border border-gray-200 h-full rounded-md">
         <div className="flex justify-between items-center pr-8">
           <h3 className="text-xl font-bold p-4">{name}</h3>
           {icon}

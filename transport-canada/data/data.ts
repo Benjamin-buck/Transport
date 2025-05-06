@@ -1,7 +1,7 @@
 export const topMenu = [
   { href: "/", label: "Home" },
   { href: "/organizations", label: "My Organizations" },
-  { href: "/services", label: "Services" },
+  // { href: "/services", label: "Services" },
   { href: "/support-requests", label: "Support Requests" },
 ];
 
@@ -71,6 +71,16 @@ export const organizations = [
   // },
 ];
 
+export const pendingOrganizations = [
+  {
+    id: "29302529",
+    legalName: "293402849 Canada Inc.",
+    operatingName: "Dangerous Shippers Inc",
+    address: "42 Wallaby Way, Thunder Bay Ontario, Canada",
+    status: "Under Review",
+  },
+];
+
 export const sampleOrgRegistrations = [
   {
     id: 1,
@@ -78,7 +88,7 @@ export const sampleOrgRegistrations = [
     company: "Walmart Inc.",
     registrationDate: "10/20/2024",
     expiryDate: "10/20/2025",
-    status: "Registered",
+    status: "Draft",
   },
   {
     id: 2,

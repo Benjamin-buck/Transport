@@ -27,7 +27,7 @@ const CID = () => {
     <div className="my-8 mx-auto container">
       <div className="mb-2 flex gap-2 items-center">
         <Link href="/organizations/sample-organization" className="underline">
-          My Organization
+          My Services
         </Link>
         <ChevronLeft size={15} />
         <Link href="/" className="underline">
@@ -38,7 +38,12 @@ const CID = () => {
 
       <div className="my-6">
         <h3 className="text-2xl font-semibold ">Select An Organization</h3>
-        <p>Please select the organization for the CID Registration.</p>
+        <p>
+          Please select the organization for the CID Registration. Don't have an
+          organization?{" "}
+          <span className="text-blue-500 underline">Click here</span> to create
+          one.
+        </p>
         <div className="mt-3">
           <Select>
             <SelectTrigger className="w-[400px]">

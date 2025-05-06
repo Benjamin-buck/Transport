@@ -32,21 +32,23 @@ export default function Home() {
           registrations by selecting a service below
         </p>
       </div>
-      <div className="mx-auto container mt-12">
-        <h2 className="text-2xl font-semibold mb-6">Recent Activites</h2>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="w-[150px]">Name</TableHead>
-              <TableHead>Service</TableHead>
-              <TableHead>Organization</TableHead>
-              <TableHead>Date Submitted</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Actions</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
+      <div className="mx-auto container mt-12 grid gap-12 grid-cols-12">
+        <div className="col-span-6">
+          <h2 className="text-2xl font-semibold mb-6">Recent Activites</h2>
+          <Table>
+            <TableCaption>You have no recent activites</TableCaption>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-[150px]">Name</TableHead>
+                <TableHead>Service</TableHead>
+                <TableHead>Organization</TableHead>
+                <TableHead>Date Submitted</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead>Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {/* <TableRow>
               <TableCell className="font-medium text-blue-400 underline">
                 IR-2024-002302930
               </TableCell>
@@ -95,9 +97,56 @@ export default function Home() {
               <TableCell>02/03/2024</TableCell>
               <TableCell>Approved</TableCell>
               <TableCell className="underline text-blue-400">View</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
+            </TableRow> */}
+            </TableBody>
+          </Table>
+        </div>
+        <div className="col-span-6 ">
+          <h2 className="text-2xl font-semibold mb-6">My Organizations</h2>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-[150px]">Legal Name</TableHead>
+                <TableHead>Operating Name</TableHead>
+                <TableHead>Address</TableHead>
+
+                <TableHead>Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell>1029302 Inc.</TableCell>
+                <TableCell>Walmart Incorporated</TableCell>
+                <TableCell>100 Main St, Ottawa ON Canada, K8J 7M2</TableCell>
+                <TableCell className="underline text-blue-400">View</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
+      </div>
+      <div className="mt-[100px]">
+        <h2 className="text-2xl font-semibold mb-2 border-b ">TDG Services</h2>
+        {/* Grid */}
+        <div className="grid grid-cols-12  gap-6 mt-6">
+          <ApplicationCard
+            name="Client Identification Database Test"
+            icon={<PhoneCall />}
+            description="If your organization imports, offers for transport, handles, or transports dangerous goods in Canada, you must register with Transport Canada’s Client Identification Database (CID)."
+            link="/cid/new-registration-generic"
+          />
+          {/* <ApplicationCard
+            name="Incidents Database"
+            icon={<PhoneCall />}
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+            link="/cid"
+          /> */}
+          <ApplicationCard
+            name="CANUTEC Registration Service"
+            icon={<PhoneCall />}
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+            link="/cid"
+          />
+        </div>
       </div>
     </div>
   );

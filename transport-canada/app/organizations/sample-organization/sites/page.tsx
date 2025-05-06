@@ -25,7 +25,7 @@ const SampleOrganization = () => {
           </Link>
           <ChevronLeft size={15} />
           <Link href="/" className="underline">
-            Client Identification Database
+            Sites
           </Link>
         </div>
       </div>

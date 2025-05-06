@@ -14,7 +14,11 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import ApplicationCard from "@/components/ApplicationCard";
-import { applicationServices, sampleOrgRegistrations } from "@/data/data";
+import {
+  applicationServices,
+  organizations,
+  sampleOrgRegistrations,
+} from "@/data/data";
 
 const SampleOrganization = () => {
   return (
@@ -97,7 +101,7 @@ const SampleOrganization = () => {
                       </span>
                     </TableCell>
                     <TableCell className="text-right text-blue-500 underline">
-                      View / Modify
+                      <Link href="/cid">View / Modify</Link>
                     </TableCell>
                   </TableRow>
                 ))}
