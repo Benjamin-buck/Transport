@@ -2,9 +2,9 @@
 import Field from "@/components/Field";
 import InfoMessage from "@/components/InfoMessage";
 import Title from "@/components/Title";
-import { sites } from "@/data/data";
+
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+
 import React, { useState } from "react";
 
 const NewSitePage = () => {
@@ -72,9 +72,7 @@ const NewSitePage = () => {
         >
           Cancel
         </Link>
-        <button className="button-dark" onClick={handleSubmit}>
-          Create Site
-        </button>
+        <button className="button-dark">Create Site</button>
       </div>
     </div>
   );

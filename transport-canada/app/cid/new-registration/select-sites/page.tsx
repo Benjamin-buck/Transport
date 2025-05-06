@@ -4,14 +4,13 @@ import React from "react";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import { Checkbox } from "@/components/ui/checkbox";
-import { contacts, sites } from "@/data/data";
+import { sites } from "@/data/data";
 import Link from "next/link";
 
 const RegistrationContacts = () => {

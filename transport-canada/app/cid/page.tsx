@@ -1,15 +1,5 @@
 import InfoMessage from "@/components/InfoMessage";
 import Title from "@/components/Title";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";

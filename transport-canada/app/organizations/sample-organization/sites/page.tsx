@@ -1,4 +1,3 @@
-import LeftMenu from "@/components/LeftMenu";
 import OrganizationMenu from "@/components/OrganizationMenu";
 import Title from "@/components/Title";
 import { ChevronLeft } from "lucide-react";
