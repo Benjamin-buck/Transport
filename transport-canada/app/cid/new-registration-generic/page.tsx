@@ -29,8 +29,8 @@ const CID = () => {
       <div className="my-6">
         <h3 className="text-2xl font-semibold ">Select An Organization</h3>
         <p>
-          Please select the organization for the CID Registration. Don't have an
-          organization?{" "}
+          Please select the organization for the CID Registration. Don&apos;t
+          have an organization?{" "}
           <span className="text-blue-500 underline">Click here</span> to create
           one.
         </p>
@@ -45,9 +45,6 @@ const CID = () => {
                   {org.operatingName}
                 </SelectItem>
               ))}
-
-              <SelectItem value="dark">Dark</SelectItem>
-              <SelectItem value="system">System</SelectItem>
             </SelectContent>
           </Select>
         </div>

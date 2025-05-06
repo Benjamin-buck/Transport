@@ -20,8 +20,8 @@ const CID = () => {
       <InfoMessage>
         <p>Your Organization is currently not registered.</p>
         <p>
-          To start a new registration, please select the 'Start a Registration'
-          button .
+          To start a new registration, please select the &apos;Start a
+          Registration&apos; button .
         </p>
       </InfoMessage>
       <div className="flex gap-3 items-center">

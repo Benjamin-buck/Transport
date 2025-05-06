@@ -1,5 +1,5 @@
 import ApplicationCard from "@/components/ApplicationCard";
-import LeftMenu from "@/components/LeftMenu";
+
 import Title from "@/components/Title";
 import {
   Table,
@@ -10,14 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  Building2,
-  LayoutDashboard,
-  MapPin,
-  PhoneCall,
-  ShoppingBag,
-} from "lucide-react";
-import Link from "next/link";
+import { PhoneCall } from "lucide-react";
 
 export default function Home() {
   return (

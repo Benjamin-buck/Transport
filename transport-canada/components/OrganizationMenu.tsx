@@ -1,13 +1,7 @@
 "use client";
-import {
-  CircleUser,
-  HomeIcon,
-  LayoutDashboard,
-  MapPin,
-  ShoppingBag,
-} from "lucide-react";
+import { CircleUser, LayoutDashboard, MapPin } from "lucide-react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const LeftMenu = () => {

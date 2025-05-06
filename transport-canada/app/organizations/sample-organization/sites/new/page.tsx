@@ -5,8 +5,6 @@ import Title from "@/components/Title";
 
 import Link from "next/link";
 
-import React, { useState } from "react";
-
 const NewSitePage = () => {
   return (
     <div className="mx-auto container mt-6">

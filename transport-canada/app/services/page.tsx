@@ -1,23 +1,15 @@
 import ApplicationCard from "@/components/ApplicationCard";
-import LeftMenu from "@/components/LeftMenu";
+
 import Title from "@/components/Title";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  Building2,
-  LayoutDashboard,
-  MapPin,
-  PhoneCall,
-  ShoppingBag,
-} from "lucide-react";
-import Link from "next/link";
+import { PhoneCall } from "lucide-react";
 
 const page = () => {
   return (
