@@ -26,7 +26,7 @@ const page = () => {
   return (
     <div className="mb-10  mx-auto container ">
       <div className="mt-8 flex justify-between items-center">
-        <Title>My Organization</Title>
+        <Title>My Organizations</Title>
         {/* <p className="mt-6">Welcome to the Dangerous Goods portal.</p> */}
         <Link href="/organizations/new" className="button-dark">
           New Organization
