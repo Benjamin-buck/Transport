@@ -125,7 +125,7 @@ export default function Home() {
             name="Client Identification Database Test"
             icon={<PhoneCall />}
             description="If your organization imports, offers for transport, handles, or transports dangerous goods in Canada, you must register with Transport Canada’s Client Identification Database (CID)."
-            link="/cid/new-registration-generic"
+            link="/cid/dashboard"
           />
           {/* <ApplicationCard
             name="Incidents Database"
