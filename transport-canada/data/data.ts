@@ -86,9 +86,9 @@ export const sampleOrgRegistrations = [
     id: 1,
     service: "Client Identification Database (CID)",
     company: "Walmart Inc.",
-    registrationDate: "10/20/2024",
-    expiryDate: "10/20/2025",
-    status: "Draft",
+    registrationDate: "-",
+    expiryDate: "-",
+    status: "Not Registered",
   },
   {
     id: 2,
@@ -96,7 +96,7 @@ export const sampleOrgRegistrations = [
     company: "Walmart Inc.",
     registrationDate: "10/20/2024",
     expiryDate: "10/20/2025",
-    status: "Under Review",
+    status: "Registered",
   },
 ];
 

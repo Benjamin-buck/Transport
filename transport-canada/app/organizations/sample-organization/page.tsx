@@ -102,7 +102,7 @@ const SampleOrganization = () => {
               </TableBody>
             </Table>
           </div>
-          <div className="mt-12">
+          {/* <div className="mt-12">
             <h2 className="text-2xl font-semibold">Register a New Service</h2>
             <div className="grid grid-cols-12 gap-3 mt-6">
               {applicationServices.map((service) => (
@@ -114,7 +114,7 @@ const SampleOrganization = () => {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

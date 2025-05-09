@@ -26,7 +26,7 @@ export default function Home() {
         </p>
       </div>
       <div className="mx-auto container mt-12 grid gap-12 grid-cols-12">
-        <div className="col-span-6">
+        <div className="col-span-6 card">
           <h2 className="text-2xl font-semibold mb-6">Recent Activites</h2>
           <Table>
             <TableCaption>You have no recent activites</TableCaption>
@@ -94,7 +94,7 @@ export default function Home() {
             </TableBody>
           </Table>
         </div>
-        <div className="col-span-6 ">
+        <div className="col-span-6 card">
           <h2 className="text-2xl font-semibold mb-6">My Organizations</h2>
           <Table>
             <TableHeader>
