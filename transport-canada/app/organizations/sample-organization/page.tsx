@@ -11,8 +11,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import ApplicationCard from "@/components/ApplicationCard";
-import { applicationServices, sampleOrgRegistrations } from "@/data/data";
+
+import { sampleOrgRegistrations } from "@/data/data";
 
 const SampleOrganization = () => {
   return (

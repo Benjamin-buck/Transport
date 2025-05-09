@@ -1,4 +1,3 @@
-import InfoMessage from "@/components/InfoMessage";
 import Title from "@/components/Title";
 import {
   Table,
